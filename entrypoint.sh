@@ -17,7 +17,7 @@ check_if_meta_yaml_file_exists() {
 }
 
 build_package(){
-    conda build -c conda-forge --output-folder . .
+    conda build -c conda-forge -c pytorch -c fcakyon --output-folder . .
     if [[ $INPUT_PLATFORMS == *"osx"* ]]; then
     conda convert -p osx-64/*.tar.bz2
     fi

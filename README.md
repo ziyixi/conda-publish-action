@@ -46,3 +46,8 @@ jobs:
 
 1. Get an Anaconda token (with read and write API access) at `anaconda.org/USERNAME/settings/access` 
 2. Add it to the Secrets of the Github repository as `ANACONDA_TOKEN`
+
+### Supported anaconda channels
+- conda-forge
+- pytorch
+- fcakyon
