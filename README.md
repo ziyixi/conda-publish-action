@@ -19,8 +19,9 @@ jobs:
     - name: publish-to-conda
       uses: maxibor/conda-package-publish-action@v1.1
       with:
-        subDir: 'conda'
-        AnacondaToken: ${{ secrets.ANACONDA_TOKEN }}
+        subdir: 'conda'
+        anacondatoken: ${{ secrets.ANACONDA_TOKEN }}
+        platforms: 'oxs linux'
 ```
 
 ### Example project structure
@@ -33,7 +34,7 @@ jobs:
 │   ├── __init__.py
 │   └── myproject.py
 ├── conda
-│   ├── build.sh
+    ├── conda_build_config.yaml
 │   └── meta.yaml
 ├── .github
 │   └── workflows
