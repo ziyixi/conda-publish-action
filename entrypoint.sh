@@ -49,8 +49,8 @@ upload_package(){
     fi
 }
 
-go_to_build_dir
 check_if_setup_file_exists
+go_to_build_dir
 check_if_meta_yaml_file_exists
 build_package
 upload_package
