@@ -30,11 +30,12 @@ jobs:
 .
 ├── LICENSE
 ├── README.md
+├── setup.py
 ├── myproject
 │   ├── __init__.py
 │   └── myproject.py
 ├── conda
-    ├── conda_build_config.yaml
+│   ├── conda_build_config.yaml
 │   └── meta.yaml
 ├── .github
 │   └── workflows
