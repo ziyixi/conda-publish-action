@@ -8,7 +8,7 @@ RUN apt-get update
 RUN apt-get install -y libgl1-mesa-dev
 
 # to fix: import cv2 > ImportError: libjasper.so.1: cannot open shared object file: No such file or directory
-RUN apt-get install software-properties-common
+RUN apt-get install -y software-properties-common
 RUN apt-get update
 RUN add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
 RUN apt-get update
