@@ -8,6 +8,8 @@ RUN apt-get update
 RUN apt-get install -y libgl1-mesa-dev
 
 # to fix: import cv2 > ImportError: libjasper.so.1: cannot open shared object file: No such file or directory
+RUN sudo add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
+RUN sudo apt update
 RUN apt-get install libjasper1
 
 RUN conda install -y anaconda-client conda-build conda-verify
