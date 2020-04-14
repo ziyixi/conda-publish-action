@@ -15,13 +15,13 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
     - name: publish-to-conda
-      uses: fcakyon/conda-package-publish-action@master
+      uses: fcakyon/conda-publish-action@v1.3
       with:
         subdir: 'conda'
         anacondatoken: ${{ secrets.ANACONDA_TOKEN }}
-        platforms: 'oxs linux'
+        platforms: 'win oxs linux'
 ```
 
 ### Example project structure

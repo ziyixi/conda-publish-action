@@ -1,6 +1,6 @@
 name: 'Publish Conda'
-description: 'Build and Publish conda package to Anaconda'
-author: 'Andrew Prokhorenkov, modified by Maxime Borry and Fatih C Akyon'
+description: 'Build and Publish Conda package to Anaconda'
+author: 'Fatih C Akyon'
 branding:
   icon: 'package'  
   color: 'purple'
@@ -12,7 +12,7 @@ inputs:
     description: 'Anaconda access token'
   platforms:
     description: 'Platforms to publish [osx/linux/win]'
-    default: 'osx linux'
+    default: 'win osx linux'
 runs:
   using: 'docker'
   image: 'Dockerfile'
