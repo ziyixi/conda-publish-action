@@ -52,3 +52,4 @@ jobs:
 - conda-forge
 - pytorch
 - fcakyon
+- districtdatalabs
