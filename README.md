@@ -21,7 +21,7 @@ jobs:
       with:
         subdir: 'conda'
         anacondatoken: ${{ secrets.ANACONDA_TOKEN }}
-        platforms: 'win oxs linux'
+        platforms: 'win osx linux'
 ```
 
 ### Example project structure
