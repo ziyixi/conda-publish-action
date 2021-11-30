@@ -30,12 +30,7 @@ build_package(){
 
 upload_package(){
     export ANACONDA_API_TOKEN=$INPUT_ANACONDATOKEN
-    if [[ $INPUT_PLATFORMS == *"macos-latest"* ]]; then
-    anaconda upload --label main osx-64/*.tar.bz2
-    fi
-    if [[ $INPUT_PLATFORMS == *"ubuntu-latest"* ]]; then
     anaconda upload --label main linux-64/*.tar.bz2
-    fi
 }
 
 check_if_setup_file_exists
