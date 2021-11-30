@@ -24,28 +24,17 @@ check_if_meta_yaml_file_exists() {
 }
 
 build_package(){
-    # Build for Linux
-    conda build -c conda-forge -c pytorch -c fcakyon -c districtdatalabs --output-folder . .
-
-    # Convert to other platforms: OSX, WIN
-    if [[ $INPUT_PLATFORMS == *"osx"* ]]; then
-    conda convert -p osx-64 linux-64/*.tar.bz2
-    fi
-    if [[ $INPUT_PLATFORMS == *"win"* ]]; then
-    conda convert -p win-64 linux-64/*.tar.bz2
-    fi
+    # Build for the current OS
+    conda build -c conda-forge --output-folder . .
 }
 
 upload_package(){
     export ANACONDA_API_TOKEN=$INPUT_ANACONDATOKEN
-    if [[ $INPUT_PLATFORMS == *"osx"* ]]; then
+    if [[ $INPUT_PLATFORMS == *"macos-latest"* ]]; then
     anaconda upload --label main osx-64/*.tar.bz2
     fi
-    if [[ $INPUT_PLATFORMS == *"linux"* ]]; then
+    if [[ $INPUT_PLATFORMS == *"ubuntu-latest"* ]]; then
     anaconda upload --label main linux-64/*.tar.bz2
-    fi
-    if [[ $INPUT_PLATFORMS == *"win"* ]]; then
-    anaconda upload --label main win-64/*.tar.bz2
     fi
 }
 
