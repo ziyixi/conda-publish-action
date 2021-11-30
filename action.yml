@@ -1,6 +1,6 @@
 name: 'Publish Conda'
 description: 'Build and Publish Conda package to Anaconda'
-author: 'Fatih C Akyon'
+author: 'Ziyi Xi'
 branding:
   icon: 'package'  
   color: 'purple'
@@ -12,7 +12,7 @@ inputs:
     description: 'Anaconda access token'
   platforms:
     description: 'Platforms to publish [osx/linux/win]'
-    default: 'win osx linux'
+    default: 'ubuntu-latest'
 runs:
   using: 'docker'
   image: 'Dockerfile'
